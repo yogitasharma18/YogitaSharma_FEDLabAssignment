@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+}
+
+/* red background, center aligned */
+.heading {
+    padding: 1em;
+    background-color: red;
+    text-align: center;
+}
+
+.heading h1 {
+    margin: 0;
+}
+
+/* select menu and provide #777 as background color */
+.menu {
+    /* when the parent (body) scrolls, and this element is about to cross the top edge, it instead "sticks" */
+    position: -webkit-sticky; /* to support old Chrome, Safari, Opera browsers */
+    position: sticky;
+    top: 0px;
+    background-color: #777;
+}
+
+.menu-group {
+    padding: 0;
+    margin: 0;
+}
+
+.menu-group > li {
+    display: inline-block;
+    padding: 0.5em;
+}
+
+.menu-group > li:hover {
+    background-color: black;
+}
+
+.menu-group > li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sub-menu-group-container {
+    position: relative;
+}
+
+.sub-menu-group {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+/* The .sub-menu-group, which is within the .sub-menu-group-container over which the user is hovering, is to be shown */
+.sub-menu-group-container:hover .sub-menu-group {
+    display: block;
+}
+
+.sub-menu-group > li a {
+    display: inline-block;
+    width: 120px;
+    padding: 0.5em;
+    color: black;
+}
+
+.sub-menu-group > li:hover a {
+    background-color: black;
+    color: white;
+}
